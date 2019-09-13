@@ -6,15 +6,23 @@ import base64
 import scipy as sc
 #from scipy.misc import imsave, imread, imresize
 #import pickle
-
+import sys
 #for importing our keras model
-#import keras.models
+from keras import models
 #for regular expressions, saves time dealing with string data
 import re
 
 
+sys.path.append(os.path.abspath('./model'))
+from load import *
+
+global model, graph
+
+
 app= Flask(__name__)
 #model=pickle.load(open('model.pkl','rb'))
+
+model, graph= init()
 
 @app.route('/')
 def home():
