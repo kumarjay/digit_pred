@@ -4,6 +4,8 @@ from flask import Flask, request, jsonify, render_template
 import os
 import base64
 import scipy as sc
+import keras
+#from keras.models import model_from_json
 #from scipy.misc import imsave, imread, imresize
 #import pickle
 import sys
@@ -14,7 +16,7 @@ import re
 
 
 sys.path.append(os.path.abspath('./model'))
-from load import *
+#from load import *
 
 #global model, graph
 
@@ -22,11 +24,25 @@ from load import *
 app= Flask(__name__)
 
 
-#model, graph= init()
+model, graph= init1()
 
 @app.route('/')
 def home():
     return render_template('index.html')
+
+def init1():
+    json_file= open('model.json', 'r')
+    loaded_model_json= json_file.read()
+    json_file.close()
+    loaded_model= keras.models.model_from_json(loaded_model_json)
+    
+    loaded_model.load_weights('model.h5')
+    print('Loaded model from disk')
+    
+    loaded_model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+    graph= tf.get_default_graph()
+    
+    return loaded_model, graph
 
 def convertImage(imgData1): 
     imgstr = re.search(b'base64,(.*)',imgData1).group(1) 
