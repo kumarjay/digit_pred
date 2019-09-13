@@ -1,15 +1,7 @@
-Flask==1.1.1
-gunicorn
-itsdangerous
-Jinja2
-MarkupSafe
-Werkzeug
-numpy
-scipy
-scikit-learn
-matplotlib
-pandas
-h5py
-keras
-pillow
+Flask == 0.11.1
 gevent
+gunicorn
+keras
+numpy
+h5py
+pillow
