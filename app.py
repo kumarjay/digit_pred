@@ -14,7 +14,7 @@ import re
 
 
 sys.path.append(os.path.abspath('./model'))
-#from load import *
+from load import *
 
 #global model, graph
 
