@@ -12,4 +12,4 @@ matplotlib>=1.4.3
 pandas>=0.19
 h5py
 pillow
-tensorflow
+tensorflow==1.13.1
