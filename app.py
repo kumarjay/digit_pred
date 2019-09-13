@@ -3,6 +3,7 @@ import numpy as np
 from flask import Flask, request, jsonify, render_template
 import os
 import base64
+import scipy
 #from scipy.misc import imsave, imread, imresize
 #import pickle
 
@@ -25,7 +26,7 @@ def convertImage(imgData1):
     with open('output.png','wb') as output: 
         output.write(base64.b64decode(imgstr))
         
-from scipy.misc import imsave, imread, imresize
+#from scipy.misc import imsave, imread, imresize
 
 @app.route('/predict/', methods=['GET','POST'])
 def predict():
