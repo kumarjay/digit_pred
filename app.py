@@ -10,7 +10,7 @@ import scipy as sc
 #import pickle
 import sys
 #for importing our keras model
-#from keras import models
+from keras import models
 #for regular expressions, saves time dealing with string data
 import re
 
