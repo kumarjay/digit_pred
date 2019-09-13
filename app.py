@@ -27,7 +27,7 @@ def convertImage(imgData1):
 def index():
     return render_template('index.html')
 
-@app.route('/predict', methods=['GET','POST'])
+@app.route('/predict/', methods=['GET','POST'])
 def predict():
     imgData= request.getData()
     convertImage(imgData)
