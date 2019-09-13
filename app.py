@@ -1,3 +1,4 @@
+from __future__ import print_function
 import numpy as np
 from flask import Flask, request, jsonify, render_template
 import os
