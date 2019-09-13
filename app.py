@@ -13,14 +13,14 @@ import sys
 import re
 
 
-#sys.path.append(os.path.abspath('./model'))
+sys.path.append(os.path.abspath('./model'))
 #from load import *
 
 #global model, graph
 
 
 app= Flask(__name__)
-#model=pickle.load(open('model.pkl','rb'))
+
 
 #model, graph= init()
 
