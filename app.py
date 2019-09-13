@@ -18,16 +18,26 @@ app= Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route('/predict', methods=['POST'])
+@app.route('/predict/', methods=['GET','POST'])
 def predict():
+    imgData= request.get_data()
+    convertImage(imgData)
+    print('debug 1')
     
-    int_features=[int(x) for x in request.form.values()]
-    final_features=[np.array(int_features)]
-    prediction=model.predict(final_features)
+    x= imread('output.png', mode='L')
+    x= np.invert(x)
+    x= imresize(x, (28,28))
+    x= x.reshape(1,28,28,1)
+    print('debug 2')
     
-    output=round(prediction[0],2)
+    with graph.as_default():
+        out= model.predict(x)
+        print(out)
+        print(np.argmax(out, axis=1))
+        print('debug 3')
+        response= np.array_str(np.argmax(out, axis=1))
+        return response
     
-    return render_template('index.html', prediction_text='Salary should be ${}'.format(output))
-
+    
 if __name__=='__main__':
     app.run(debug=True)
