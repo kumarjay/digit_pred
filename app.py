@@ -4,14 +4,9 @@ from flask import Flask, request, jsonify, render_template
 import os
 import base64
 import scipy as sc
-#import keras
-#from keras.models import model_from_json
-#from scipy.misc import imsave, imread, imresize
-#import pickle
+
 import sys
-#for importing our keras model
-#from keras import models
-#for regular expressions, saves time dealing with string data
+
 import re
 
 
