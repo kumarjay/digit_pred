@@ -16,7 +16,7 @@ global model, graph
 
 model, graph= init()
 
-def converImage(imgData1):
+def convertImage(imgData1):
     imgstr= re.search(r'base64,(.*)',imgData1).group(1)
     
     with open('output.png','wb') as output:
