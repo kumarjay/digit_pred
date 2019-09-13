@@ -24,25 +24,13 @@ sys.path.append(os.path.abspath('./model'))
 app= Flask(__name__)
 
 
-model, graph= init1()
+#model, graph= init1()
 
 @app.route('/')
 def home():
     return render_template('index.html')
 
-def init1():
-    json_file= open('model.json', 'r')
-    loaded_model_json= json_file.read()
-    json_file.close()
-    loaded_model= keras.models.model_from_json(loaded_model_json)
-    
-    loaded_model.load_weights('model.h5')
-    print('Loaded model from disk')
-    
-    loaded_model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
-    graph= tf.get_default_graph()
-    
-    return loaded_model, graph
+
 
 def convertImage(imgData1): 
     imgstr = re.search(b'base64,(.*)',imgData1).group(1) 
