@@ -6,7 +6,7 @@ from flask import Flask, request, jsonify, render_template
 #for importing our keras model
 import keras.models
 #for regular expressions, saves time dealing with string data
-import re
+#import re
 
 
 app= Flask(__name__)
