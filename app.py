@@ -1,10 +1,11 @@
 import numpy as np
 from flask import Flask, request, jsonify, render_template
+import os
 #from scipy.misc import imsave, imread, imresize
 #import pickle
 
 #for importing our keras model
-import keras.models
+#import keras.models
 #for regular expressions, saves time dealing with string data
 #import re
 
