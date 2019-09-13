@@ -24,6 +24,8 @@ def convertImage(imgData1):
     #print(imgstr) 
     with open('output.png','wb') as output: 
         output.write(base64.b64decode(imgstr))
+        
+from scipy.misc import imsave, imread, imresize
 
 @app.route('/predict/', methods=['GET','POST'])
 def predict():
