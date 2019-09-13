@@ -1,6 +1,6 @@
 import numpy as np
 from flask import Flask, request, jsonify, render_template
-#from scipy.misc import imsave, imread, imresize
+from scipy.misc import imsave, imread, imresize
 import pickle
 
 
