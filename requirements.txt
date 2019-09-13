@@ -13,5 +13,7 @@ h5py
 keras
 pillow
 gevent
+scipy
+PIL
 
 
