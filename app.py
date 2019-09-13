@@ -4,7 +4,7 @@ from flask import Flask, request, jsonify, render_template
 import os
 import base64
 import scipy as sc
-import keras
+#import keras
 #from keras.models import model_from_json
 #from scipy.misc import imsave, imread, imresize
 #import pickle
