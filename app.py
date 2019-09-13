@@ -13,6 +13,8 @@ import base64
 sys.path.append(os.path.abspath('./model'))
 from load import *
 
+app= Flask(__name__)
+
 global model, graph
 
 model, graph= init()
