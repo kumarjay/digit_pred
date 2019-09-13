@@ -2,7 +2,7 @@ from __future__ import print_function
 import numpy as np
 from flask import Flask, request, jsonify, render_template
 import os
-from scipy.misc import imsave, imread, imresize
+#from scipy.misc import imsave, imread, imresize
 #import pickle
 
 #for importing our keras model
