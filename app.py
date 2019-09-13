@@ -10,21 +10,21 @@ import scipy as sc
 #import pickle
 import sys
 #for importing our keras model
-from keras import models
+#from keras import models
 #for regular expressions, saves time dealing with string data
 import re
 
 
 sys.path.append(os.path.abspath('./model'))
-#from load import *
+import load
 
-#global model, graph
+global model, graph
 
 
 app= Flask(__name__)
 
 
-#model, graph= init1()
+model, graph= init1()
 
 @app.route('/')
 def home():
