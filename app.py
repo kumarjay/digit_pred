@@ -4,28 +4,20 @@ from flask import Flask, request, jsonify, render_template
 import os
 import base64
 import scipy as sc
-
 import sys
-
 import re
-
 
 sys.path.append(os.path.abspath('./model'))
 import load
 
 global model, graph
-
+model, graph= init()
 
 app= Flask(__name__)
-
-
-model, graph= init()
 
 @app.route('/')
 def home():
     return render_template('index.html')
-
-
 
 def convertImage(imgData1): 
     imgstr = re.search(b'base64,(.*)',imgData1).group(1) 
