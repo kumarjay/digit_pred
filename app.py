@@ -19,7 +19,7 @@ global model, graph
 app= Flask(__name__)
 
 
-model, graph= init1()
+model, graph= init()
 
 @app.route('/')
 def home():
