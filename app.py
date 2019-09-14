@@ -3,7 +3,7 @@ import numpy as np
 from flask import Flask, request, jsonify, render_template
 import os
 import base64
-import scipy as sc
+#import scipy as sc
 import sys
 import re
 
