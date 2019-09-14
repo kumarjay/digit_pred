@@ -8,10 +8,10 @@ import sys
 import re
 
 sys.path.append(os.path.abspath('./model'))
-import load
+#import load
 
 global model, graph
-model, graph= init()
+#model, graph= init()
 
 app= Flask(__name__)
 
