@@ -10,7 +10,7 @@ import re
 #from keras imprt models
 
 sys.path.append(os.path.abspath('./model'))
-import load
+from load import *
 
 app= Flask(__name__)
 
