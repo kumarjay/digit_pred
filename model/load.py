@@ -2,7 +2,7 @@
 
 import numpy as np
 import keras
-from scipy.misc import imread, imresize, imshow
+#from scipy.misc import imread, imresize, imshow
 import tensorflow as tf
 
 def init():
