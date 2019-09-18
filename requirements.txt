@@ -12,3 +12,4 @@ pandas>=0.19
 keras
 h5py
 pillow
+tensorflow
