@@ -39,9 +39,9 @@ def predict():
     convertImage(imgData)
     print('debug 1')
     
-    x= imread('output.png', mode='L')
+    x= sc.misc.imread('output.png', mode='L')
     x= np.invert(x)
-    x= imresize(x, (28,28))
+    x= sc.misc.imresize(x, (28,28))
     x= x.reshape(1,28,28,1)
     print('debug 2')
     
