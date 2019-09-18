@@ -12,10 +12,12 @@ import re
 sys.path.append(os.path.abspath('./model'))
 import load
 
+app= Flask(__name__)
+
 global model, graph
 model, graph= init()
 
-app= Flask(__name__)
+
 model=pickle.load(open('model.pkl','rb'))
 
 @app.route('/')
