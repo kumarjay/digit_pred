@@ -4,7 +4,7 @@ from flask import Flask, request, jsonify, render_template
 import pickle
 import os
 import base64
-import scipy as sc
+import cv2
 import sys
 import re
 #from keras imprt models
@@ -39,9 +39,9 @@ def predict():
     convertImage(imgData)
     print('debug 1')
     
-    x= sc.misc.imread('output.png', mode='L')
+    x= cv2.imread('output.png', 0)
     x= np.invert(x)
-    x= sc.misc.imresize(x, (28,28))
+    x= cv2.resize(x, (28,28))
     x= x.reshape(1,28,28,1)
     print('debug 2')
     
