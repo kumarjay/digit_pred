@@ -13,4 +13,4 @@ h5py
 pillow
 tensorflow
 gevent
-cv2
+opencv-python
